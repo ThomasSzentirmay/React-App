@@ -1,7 +1,7 @@
 function Landing() {
     return (
         <main>
-            <h2>Landing</h2>
+            <h1>Landing</h1>
             <p>Welcome to our React starter site</p>
         </main>
     )
