@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 function Landing() {
 
-    // const students = ['Erin', 'Thomas', 'Liam', 'Jeremy'];
     const [studentName, setStudentName] = useState('');
     const [students, setStudents] = useState(['Erin', 'Thomas', 'Liam', 'Jeremy']);
 
