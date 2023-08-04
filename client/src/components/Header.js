@@ -7,11 +7,13 @@ function Header(propsObj) {
 
         switch(text) {
             case 'About':
-                propsObj.page = 'about';
+                propsObj.setPage('about');
+                break;
             case 'Contact':
-                propsObj.page = 'contact';
+                propsObj.setPage('contact');
+                break;
             default:
-                propsObj.page = 'landing';
+                propsObj.setPage('landing');
         }
     }
 
@@ -20,9 +22,9 @@ function Header(propsObj) {
         <header className='row justify-between align-center'>
             <h3>Logo</h3>
             <nav>
-                <a onClick={changePage} className={propsObj.page === 'landing' ? 'active' : ''} href='#'>Home</a>
-                <a onClick={changePage} className={propsObj.page === 'about' ? 'active' : ''} href='#'>About</a>
-                <a onClick={changePage} className={propsObj.page === 'contact' ? 'active' : ''} href='#'>Contact</a>
+                <a onClick={changePage} className={propsObj.page === 'landing' ? 'active' : ''} href='/'>Home</a>
+                <a onClick={changePage} className={propsObj.page === 'about' ? 'active' : ''} href='/about'>About</a>
+                <a onClick={changePage} className={propsObj.page === 'contact' ? 'active' : ''} href='/contact'>Contact</a>
             </nav>
         </header>
     )
