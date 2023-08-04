@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 
 function App() {
   let [page, setPage] = useState('landing');
+  const [darkMode, setDarkMode] = useState(true);
 
   const handlePageView = () => {
     switch (page) {
@@ -24,13 +25,13 @@ function App() {
   }
 
   return (
-    <>
+    <div className={`container ${darkMode ? 'dark' : ''}`}>
       <Header page={page} setPage={setPage} />
 
       {handlePageView()}
 
       <Footer />
-    </>
+    </div>
   );
 }
 

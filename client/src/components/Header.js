@@ -20,7 +20,11 @@ function Header(propsObj) {
 
     return (
         <header className='row justify-between align-center'>
-            <h3>Logo</h3>
+            <h3>Logo</h3>   
+            <div className="toggle-wrap">
+                <span className="toggle"></span>
+            </div>
+
             <nav>
                 <a onClick={changePage} className={propsObj.page === 'landing' ? 'active' : ''} href='/'>Home</a>
                 <a onClick={changePage} className={propsObj.page === 'about' ? 'active' : ''} href='/about'>About</a>
